@@ -286,4 +286,50 @@ footer {
   background-color: #ffd700;
   color: #000;
 }
+  /* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 90%;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
