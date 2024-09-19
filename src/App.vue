@@ -13,7 +13,7 @@
     </header>
 
     <section id="home" class="hero">
-      <h1>Welcome to the Mood-Based Music App</h1>
+      <h1>Welcome to MoodTunes</h1>
       <p>Discover music based on your emotions</p>
       <a href="#demo" class="cta-button">Watch Demo</a>
     </section>
