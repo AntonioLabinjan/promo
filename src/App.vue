@@ -8,12 +8,13 @@
           <li><a href="#demo">Demo</a></li>
           <li><a href="#screenshots">Screenshots</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy-policy">Privacy policy</a></li>
         </ul>
       </nav>
     </header>
 
     <section id="home" class="hero">
-      <h1>Welcome to MoodTunes</h1>
+      <h1>Welcome to the Mood-Based Music App</h1>
       <p>Discover music based on your emotions</p>
       <a href="#demo" class="cta-button">Watch Demo</a>
     </section>
@@ -60,17 +61,28 @@
   <a href="#" class="support-button" target="_blank">Join Our Campaign</a>
 </section>
 
-    <section id="screenshots">
-      <h2>Screenshots</h2>
-      <div class="screenshot-grid">
-        <img :src="Screen1" alt="App Screenshot 1" />
-        <img :src="Screen2" alt="App Screenshot 2" />
-        <img :src="Screen3" alt="App Screenshot 3" />
-        <img :src="Screen4" alt="App Screenshot 4" />
-        <img :src="Screen5" alt="App Screenshot 5" />
-        <img :src="Screen6" alt="App Screenshot 6" />
-      </div>
-    </section>
+<section id="screenshots">
+  <h2>Screenshots</h2>
+  <div class="screenshot-grid">
+    <img v-for="(image, index) in images" :src="image" :alt="'App Screenshot ' + (index + 1)" @click="openModal(image)" />
+  </div>
+
+  <!-- Image Modal -->
+  <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
+    <div class="modal-content">
+      <span class="close-button" @click="closeModal">&times;</span>
+      <img :src="modalImage" class="modal-image" />
+    </div>
+  </div>
+</section>
+
+<section id="privacy-policy">
+  <h2>Privacy Policy</h2>
+  <p>Your privacy is important to us. This privacy policy explains how we collect, use, and share information.</p>
+  <p> We don't. None of your private info will ever be shared with this app. </p>
+  <!-- Add detailed privacy policy content as necessary -->
+</section>
+
 
     <footer id="contact">
       <h2>Contact Us</h2>
@@ -93,15 +105,23 @@ export default {
   name: 'App',
   data() {
     return {
-      Screen1,
-      Screen2,
-      Screen3,
-      Screen4,
-      Screen5,
-      Screen6
+      images: [Screen1, Screen2, Screen3, Screen4, Screen5, Screen6],
+      isModalOpen: false,
+      modalImage: null,
     };
   },
-}
+  methods: {
+    openModal(image) {
+      this.modalImage = image;
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.isModalOpen = false;
+      this.modalImage = null;
+    },
+  },
+};
+
 </script>
 
 <style scoped>
@@ -285,50 +305,56 @@ footer {
   background-color: #ffd700;
   color: #000;
 }
-  /* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .feature-item {
-    width: 90%;
-  }
-
-  .video-wrapper {
-    max-width: 100%;
-  }
-
-  .screenshot-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-  }
-
-  .screenshot-grid {
-    grid-template-columns: 1fr;
-  }
+.modal-content {
+  position: relative;
 }
+
+.modal-image {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+#privacy-policy {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#privacy-policy h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#privacy-policy p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 </style>
