@@ -75,7 +75,6 @@
     <footer id="contact">
       <h2>Contact Us</h2>
       <p>Email: Tu_ćemo_stavit_official_email</p>
-      <p>Phone: Tu_ćemo_stavit_official_telefon</p>
       <p>Address: Tu_ćemo_stavit_neku_official_adresu</p>
     </footer>
   </div>
