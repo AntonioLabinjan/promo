@@ -126,6 +126,7 @@ export default {
 
 <style scoped>
 /* Global Styles */
+/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -160,6 +161,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -220,6 +222,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .feature-item {
@@ -237,7 +240,6 @@ nav ul li a:hover {
 }
 
 /* Video Section */
-/* Video Section */
 .video-section {
   padding: 60px 20px;
   background-color: #333;
@@ -245,7 +247,7 @@ nav ul li a:hover {
 }
 
 .video-wrapper {
-  max-width: 640px; /* Reduced from 800px */
+  max-width: 640px;
   margin: 0 auto;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -338,7 +340,7 @@ footer {
   cursor: pointer;
 }
 
-
+/* Privacy Policy */
 #privacy-policy {
   padding: 60px 20px;
   background-color: #f9f9f9;
@@ -357,4 +359,54 @@ footer {
   margin: 0 auto;
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .feature-item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
 </style>
