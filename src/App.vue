@@ -86,7 +86,7 @@
 
     <footer id="contact">
       <h2>Contact Us</h2>
-      <p>Email: Tu_ćemo_stavit_official_email</p>
+      <p>Email: amstudio237@gmail.com </p>
       <p>Address: Tu_ćemo_stavit_neku_official_adresu</p>
     </footer>
   </div>
