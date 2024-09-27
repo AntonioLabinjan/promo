@@ -87,7 +87,7 @@
     <footer id="contact">
       <h2>Contact Us</h2>
       <p>Email: amstudio237@gmail.com </p>
-      <p>Address: Zagreb, Hrvatska/Croatia<p>
+      <p>Address: Zagreb, Hrvatska/Croatia</p>
     </footer>
   </div>
 </template>
