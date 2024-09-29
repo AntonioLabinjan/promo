@@ -55,6 +55,12 @@
       </div>
     </section>
 
+    <section id="download" class="download-section">
+  <h2>Download the MoodTrek BETA</h2>
+  <p>Get your hands on the latest version of our app now!</p>
+  <a href="https://onedrive.live.com/?id=144DED0DF3B8FB69%21s1569103524ca415abf24f4e3feadc66e&cid=144DED0DF3B8FB69" download class="download-button">Download MoodTrek BETA</a>
+</section>
+    
     <section id="support">
   <h2>Support Our Kickstarter Campaign (yet to be announced)</h2>
   <br>
@@ -409,4 +415,27 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+  .download-section {
+  text-align: center; /* Centers text and inline elements */
+  padding: 40px 20px; /* Optional padding for spacing */
+  background-color: #f9f9f9; /* Optional background color */
+}
+
+.download-button {
+  display: inline-block; /* Makes the link behave like a button */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 15px 30px; /* Button padding */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor style */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.download-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
 </style>
