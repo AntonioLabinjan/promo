@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- Header and Navigation -->
     <header>
       <nav>
         <ul>
@@ -7,93 +8,118 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#demo">Demo</a></li>
           <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#support">Support</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#privacy-policy">Privacy policy</a></li>
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Welcome to the FeelTrak</h1>
-      <p>Discover music based on your emotions</p>
+      <h1>Welcome to FeelTrak</h1>
+      <p>Discover music that matches your mood</p>
       <a href="#demo" class="cta-button">Watch Demo</a>
     </section>
 
+    <!-- Features Section -->
     <section id="features">
-      <h2>Some of the features. More to come :)</h2>
-      <br>
+      <h2>Awesome Features</h2>
       <div class="features-grid">
         <div class="feature-item">
-          <h3>Emotion Recognition</h3>
-          <p>Our AI recognizes your mood and plays the perfect song.</p>
+          <h3>🎭 Emotion Recognition</h3>
+          <p>AI recognizes your mood and plays the perfect song for you.</p>
         </div>
         <div class="feature-item">
-          <h3>Custom Playlists</h3>
-          <p>Automatically generate playlists based on how you're feeling.</p>
+          <h3>📚 Custom Playlists</h3>
+          <p>Automatically generate playlists based on your emotions.</p>
         </div>
         <div class="feature-item">
-          <h3>Instant Song Suggestions</h3>
-          <p>Get song suggestions that match your mood instantly.</p>
+          <h3>💡 Instant Song Suggestions</h3>
+          <p>Get the perfect song suggestions instantly.</p>
         </div>
         <div class="feature-item">
-          <h3>Generate beats</h3>
-          <p>Get cool short beats with mood of your choice.</p>
+          <h3>🎶 Generate Beats</h3>
+          <p>Quickly create beats that match your mood.</p>
         </div>
         <div class="feature-item">
-          <h3>Track emotions</h3>
-          <p>Track your emotions with the help of visualization plot.</p>
+          <h3>📊 Track Emotions</h3>
+          <p>Visualize your emotions over time with our tracker.</p>
         </div>
       </div>
     </section>
 
-
+    <!-- Demo Section -->
     <section id="demo" class="video-section">
       <h2>Watch the Demo</h2>
-      <br>
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/MnDuzW7SAbI?si=t0c5jHaFooN2ay3D" frameborder="0" allowfullscreen></iframe>
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/PBwGtrGUmC8?si=WkwGiPF2aUrlw28e"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 
+    <!-- Download Section -->
     <section id="download" class="download-section">
-  <h2>Download the MoodTrek BETA</h2>
-  <p>Get your hands on the latest version of our app now!</p>
-  <a href="https://onedrive.live.com/?id=144DED0DF3B8FB69%21s1569103524ca415abf24f4e3feadc66e&cid=144DED0DF3B8FB69" download class="download-button">Download MoodTrek BETA</a>
-</section>
-    
+      <h2>Download FeelTrak BETA</h2>
+      <p>Get the latest version now!</p>
+      <a
+        href="https://onedrive.live.com/?id=144DED0DF3B8FB69%21s1569103524ca415abf24f4e3feadc66e&cid=144DED0DF3B8FB69"
+        download
+        class="download-button"
+      >
+        Download FeelTrak BETA
+      </a>
+    </section>
+
+    <!-- Support Section -->
     <section id="support">
-  <h2>Support Our Kickstarter Campaign (yet to be announced)</h2>
-  <br>
-  <a href="#" class="support-button" target="_blank">Join Our Campaign</a>
-</section>
-
-<section id="screenshots">
-  <h2>Screenshots</h2>
-  <div class="screenshot-grid">
-    <img v-for="(image, index) in images" :src="image" :alt="'App Screenshot ' + (index + 1)" @click="openModal(image)" />
-  </div>
-
-  <!-- Image Modal -->
-  <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
-    <div class="modal-content">
-      <span class="close-button" @click="closeModal">&times;</span>
-      <img :src="modalImage" class="modal-image" />
-    </div>
-  </div>
-</section>
-
-<section id="privacy-policy">
-  <h2>Privacy Policy</h2>
-  <p>Your privacy is important to us. This privacy policy explains how we collect, use, and share information.</p>
-  <p> We don't. None of your private info will ever be shared with this app. </p>
-  <!-- Add detailed privacy policy content as necessary -->
+  <h2>Support us on Patreon</h2>
+  <p>Join our mission to make the world happier through music.</p>
+  <a href="https://www.patreon.com/FeelTuneStudio404" class="support-button" target="_blank">Join Now</a>
 </section>
 
 
+    <!-- Screenshots Section -->
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <div class="screenshot-grid">
+        <img
+          v-for="(image, index) in images"
+          :src="image"
+          :alt="'App Screenshot ' + (index + 1)"
+          @click="openModal(image)"
+        />
+      </div>
+
+      <!-- Modal -->
+      <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
+        <div class="modal-content">
+          <span class="close-button" @click="closeModal">&times;</span>
+          <img :src="modalImage" class="modal-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy-policy">
+      <h2>Privacy Policy</h2>
+      <p>Your privacy matters to us. We don't collect or share your personal information.</p>
+    </section>
+
+    <!-- Footer and Contact -->
     <footer id="contact">
       <h2>Contact Us</h2>
-      <p>Email: amstudio237@gmail.com </p>
-      <p>Address: Zagreb, Hrvatska/Croatia</p>
+      <p>Email: <a href="mailto:amstudio237@gmail.com">amstudio237@gmail.com</a></p>
+      <p>Location: Zagreb, Hrvatska/Croatia</p>
     </footer>
   </div>
 </template>
@@ -105,7 +131,6 @@ import Screen3 from '@/assets/Screen3.png';
 import Screen4 from '@/assets/Screen4.png';
 import Screen5 from '@/assets/Screen5.png';
 import Screen6 from '@/assets/Screen6.png';
-
 
 export default {
   name: 'App',
@@ -127,26 +152,32 @@ export default {
     },
   },
 };
-
 </script>
 
 <style scoped>
 /* Global Styles */
-/* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: #f5f8fb;
   color: #333;
 }
 
 a {
-  color: #007bff;
+  color: #ff6600;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-h1, h2, h3, h4 {
+a:hover {
+  color: #ff4500;
+}
+
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -159,25 +190,21 @@ ul {
 
 /* Header & Nav */
 header {
-  background-color: #333;
+  background-color: #1a1a1d;
   padding: 20px;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0;
+  gap: 30px;
 }
 
 nav ul li a {
   color: white;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -186,16 +213,15 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('@/assets/R.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
   padding: 100px 20px;
   text-align: center;
   color: white;
+  border-radius: 0 0 50px 50px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
@@ -205,126 +231,141 @@ nav ul li a:hover {
 }
 
 .cta-button {
-  background-color: #007bff;
+  background: linear-gradient(45deg, #ff6600, #ff4500);
   color: white;
-  padding: 15px 30px;
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(45deg, #ff4500, #ff6600);
 }
 
 /* Features Section */
 #features {
-  padding: 60px 20px;
-  background-color: #fff;
+  padding: 80px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
 }
 
 .features-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  flex-wrap: wrap;
 }
 
 .feature-item {
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #fff;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Video Section */
 .video-section {
-  padding: 60px 20px;
-  background-color: #333;
-  color: white;
+  padding: 80px 20px;
 }
 
 .video-wrapper {
-  max-width: 640px;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
+  display: flex;
+  justify-content: center;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* Download Section */
+.download-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1a1a1d;
+  color: white;
+  border-radius: 20px;
+}
+
+.download-button {
+  background: linear-gradient(45deg, #ff6600, #ff4500);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background: linear-gradient(45deg, #ff4500, #ff6600);
+}
+
+/* Support Section */
+.support-button {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.support-button:hover {
+  background-color: #218838;
 }
 
 /* Screenshots Section */
 .screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 60px 20px;
 }
 
 .screenshot-grid img {
-  width: 100%;
+  width: 300px;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-  padding: 40px 20px;
-  background-color: #222;
-  color: white;
-  text-align: center;
-}
-
-#support {
-  padding: 60px 20px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-}
-
-.support-button {
-  display: inline-block;
-  background-color: #ffcc00;
-  color: #333;
-  padding: 15px 30px;
-  border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-.support-button:hover {
-  background-color: #ffd700;
-  color: #000;
+.screenshot-grid img:hover {
+  transform: scale(1.05);
 }
 
-/* Modal Styles */
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
@@ -332,110 +373,26 @@ footer {
 }
 
 .modal-image {
-  max-width: 90%;
-  max-height: 80vh;
+  max-width: 90vw;
+  max-height: 90vh;
   border-radius: 10px;
 }
 
 .close-button {
   position: absolute;
   top: 10px;
-  right: 20px;
-  font-size: 2rem;
+  right: 15px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
 }
 
-/* Privacy Policy */
-#privacy-policy {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
+/* Footer */
+footer {
+  background-color: #1a1a1d;
+  color: white;
   text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
-
-#privacy-policy h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-#privacy-policy p {
-  font-size: 1rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .screenshot-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .feature-item {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .screenshot-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-  }
-}
-
-  .download-section {
-  text-align: center; /* Centers text and inline elements */
-  padding: 40px 20px; /* Optional padding for spacing */
-  background-color: #f9f9f9; /* Optional background color */
-}
-
-.download-button {
-  display: inline-block; /* Makes the link behave like a button */
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  padding: 15px 30px; /* Button padding */
-  border: none; /* No border */
-  cursor: pointer; /* Cursor style */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* No underline */
-  transition: background-color 0.3s; /* Smooth transition */
-}
-
-.download-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
 </style>
