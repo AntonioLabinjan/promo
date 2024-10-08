@@ -395,4 +395,37 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .features-grid {
+    display: block;
+  }
+
+  .feature-item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .cta-button, .download-button, .support-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .screenshot-grid img {
+    width: 100%;
+  }
+}
 </style>
